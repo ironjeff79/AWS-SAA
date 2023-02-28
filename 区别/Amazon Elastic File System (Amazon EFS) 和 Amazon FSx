@@ -1,0 +1,10 @@
+在本模块中，您已经了解了 Amazon S3 和 Amazon EBS。您了解到，S3 使用扁平命名空间，但这并不意味着它用作独立的文件系统。
+
+您还了解到，大多数 EBS 卷一次只能附加到一个 EC2 实例。因此，如果您需要在 AWS 上存储文件，则应该使用哪种服务？
+对于可挂载到多个 EC2 实例的文件存储，您可以使用 Amazon Elastic File System (Amazon EFS) 或 Amazon FSx。下表提供了有关每项服务的详细信息。
+
+以下是 Amazon EFS 和 Amazon FSx 的几个重要特点，在与其他服务进行比较时，您需要了解这些特点：
+
+它是文件存储。
+您按实际使用量付费（不必提前预置存储空间）。
+Amazon EFS 和 Amazon FSx 可以挂载到多个 EC2 实例上。

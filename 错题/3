@@ -1,0 +1,9 @@
+B & D-Irrelevant.
+CORS is about resource sharing in the context web hosting.
+CORS is a mechanism that allow you to override 'same-origin-policy' of browsers which prevent scripts of one origin to access private data hosted on anohter origin.
+Refer the link 1 for more details.; However in simple terms for security, in a web page hosted by
+http://b1.com, any AJAX call with 'COOKIES'(credential) to any other host will be blocked.http://b1.com/index.html makes javascript call to 
+http://b2.com/image.png (imp:with COOKIES), the call will be blocked by browser.
+This is a problem if you want to serve your website from two different host or S3 buckets.And to solve it you can configure CORS but it is irrelevant to question here.;
+A or C-recommended by Amazon:Use Deep archive when data is accessed at most twice a year with latencies of 12 to 48 hours.
+The question demands data within 4 hours 

@@ -1,0 +1,4 @@
+VPC endpoints for S3 are secured through VPC endpoint access polices.This allows you to set which S3 buckets the endpoints should and should not have access to.
+By default, any user or service within the VPC, has access to any S3 resource.
+Use together with S3 bucket policies to further refine access control over your buckets and objects.
+https://tutorialsdojo.com/amazon-s3-bucket-policies-for-vpc-endpoints/ 

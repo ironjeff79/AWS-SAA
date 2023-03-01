@@ -1,0 +1,2 @@
+The question says "fastest storage option for holding the temporary files".
+The fatest storage option for an EC2 is always the instance store volumes.

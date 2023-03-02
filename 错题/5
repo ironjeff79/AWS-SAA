@@ -1,0 +1,16 @@
+ The visibility timeout begins when Amazon SQS returns a message.During this time, the consumer processes and deletes the message.
+ However, if the consumer fails before deleting the message and your system doesn't call the DeleteMessage action for that message
+ before the visibility timeout expires, the message becomes visible to other consumers and the message is received again.
+ If a message must be received only once, your consumer should delete it within the duration of the visibility timeout.
+ 
+ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html 
+ keyword: SQS queue writes to an Amazon RDS From this, Option D best suite & other Options ruled out
+ [Option A-You can't intruduce one more Queue in the existing one; Option B-only Permission & Option C-Only Retrieves Messages]
+ FIF O queues are designed to never introduce duplicate messages.However, your message producer might introduce duplicates in certain scenarios:
+ for example, if the producer sends a message, does not receive a response, and then resends the same message.
+ Amazon SQS APIs provide deduplication functionality that prevents your message producer from sending duplicates.
+ Any duplicates introduced by the message producer are removed within a 5-minute deduplication interval.
+ For standard queues, you might occasionally receive a duplicate copy of a message (at-least-once delivery).
+ If you use a standard queue, 
+ you must design your applications to be idempotent 
+ (that is, they must not be affected adversely when processing the same message more than once).
